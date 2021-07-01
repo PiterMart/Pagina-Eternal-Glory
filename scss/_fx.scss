@@ -1,0 +1,19 @@
+.scale:hover{
+	transform: scale(1.05);
+	transition: ease-in-out 500ms;
+}
+.scale2:hover{
+	transform: scale(1.15);
+	transition: ease-in-out 500ms;
+}
+
+
+.blink:hover{
+    animation: blink 3.5s linear infinite;
+    animation-delay: 0s;
+}
+@keyframes blink {
+    50% {
+        color:$fondoTransparente;
+    }
+}
