@@ -37,11 +37,13 @@ body {
     }
     img{
         max-width: 75%;
+        padding: 0;
     }
 }
 
 .bloque_header__logo{
-    padding-left: 1em;
+    width: 300px;
+    padding-left: 0px;
 
 }
 .bloque_header__nav-toggle{

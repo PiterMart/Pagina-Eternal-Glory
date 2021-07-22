@@ -40,10 +40,12 @@ body {
 
 #bloque_header img {
   max-width: 75%;
+  padding: 0;
 }
 
 .bloque_header__logo {
-  padding-left: 1em;
+  width: 300px;
+  padding-left: 0px;
 }
 
 .bloque_header__nav-toggle {
@@ -146,8 +148,7 @@ body {
 }
 
 #bloque_scroll img {
-  height: 50rem;
-  width: 100%;
+  size: 30rem;
   margin: 0px;
 }
 
