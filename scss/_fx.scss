@@ -6,11 +6,24 @@
 	transform: scale(1.15);
 	transition: ease-in-out 500ms;
 }
-
+.asdasd{
+    animation: blink 7s linear infinite;
+    animation-delay: 0s;
+    text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px rgb(175, 188, 199),
+    0 0 82px rgb(171, 187, 189),
+    0 0 92px rgb(155, 186, 189),
+    0 0 102px rgb(153, 179, 185),
+    0 0 151px rgb(142, 167, 177);
+}
 
 .blink:hover{
     animation: blink 3.5s linear infinite;
     animation-delay: 0s;
+    
 }
 @keyframes blink {
     50% {

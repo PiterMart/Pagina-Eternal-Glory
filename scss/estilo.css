@@ -4,10 +4,11 @@
   font-weight: 500;
   font-size: 2rem;
   color: black;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #afbcc7, 0 0 82px #abbbbd, 0 0 92px #9bbabd, 0 0 102px #99b3b9, 0 0 151px #8ea7b1;
 }
 
 body {
-  background: url(../media/fondoMosaico.png);
+  background: url(../media/fondo-piedra.jpg);
   background-repeat: repeat;
   background-color: white;
   -webkit-box-pack: center;
@@ -17,6 +18,14 @@ body {
       -ms-flex-align: center;
           align-items: center;
   min-height: 100vh;
+  width: 100%;
+  cursor: url("../media/2cross.svg"), auto;
+}
+
+body a {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
 }
 
 #bloque_header {
@@ -33,7 +42,7 @@ body {
 
 #bloque_header a {
   text-decoration: none;
-  color: #444444;
+  color: black;
   text-transform: uppercase;
   font-size: 1.2rem;
 }
@@ -147,13 +156,38 @@ body {
   margin-left: 1em;
 }
 
+#bloque_scroll {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow: auto;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 #bloque_scroll img {
   size: 30rem;
-  margin: 0px;
+  width: 100%;
+}
+
+#bloque_scroll p {
+  position: absolute;
+  color: #444444;
+  font-size: 3rem;
+  top: 8rem;
+  padding-left: 2.5rem;
 }
 
 #bloque_contenedor {
-  padding-top: 90px;
+  padding-top: 110px;
   padding-bottom: 50px;
   max-width: 800px;
   margin: auto;
@@ -175,13 +209,14 @@ body {
 
 #bloque_contenedor a {
   text-decoration: none;
-  color: #444444;
+  color: black;
   text-transform: uppercase;
 }
 
 #bloque_contenedor h1 {
   font-weight: 200;
-  font-size: 20px;
+  font-size: 3rem;
+  color: black;
 }
 
 #bloque_contenedor h2 {
@@ -219,18 +254,47 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  padding: 10px;
+}
+
+#contenedor-detalle img {
+  padding: 10px;
+  width: 100%;
+}
+
+#contenedor-detalle a {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+.bloque_contenedor__productos {
+  max-width: 800px;
+  width: 80%;
+  margin: auto;
+  font-size: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-}
-
-.bloque_contenedor__productos {
-  max-width: 800px;
-  width: 60%;
-  margin: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -247,6 +311,12 @@ body {
   padding: 7px;
 }
 
+.bloque_contenedor__productos img {
+  size: 30rem;
+  margin: 0px;
+  width: 100%;
+}
+
 .proximamente {
   padding: 0px;
   margin: 0;
@@ -254,6 +324,7 @@ body {
 }
 
 #bloque_footer {
+  margin-top: 110px;
   position: absolute;
   width: 100%;
   display: -webkit-box;
@@ -344,9 +415,16 @@ body {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
+  #bloque_scroll p {
+    position: absolute;
+    color: #444444;
+    font-size: 5rem;
+    top: 12rem;
+    padding-left: 2.5rem;
+  }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1020px) {
   .bloque_header__nav-toggle-label {
     display: none;
   }
@@ -397,8 +475,12 @@ body {
   .bloque_header__botonera a {
     opacity: 1;
   }
-  #bloque_scroll {
-    padding-top: 0px;
+  #bloque_scroll p {
+    position: absolute;
+    color: #444444;
+    font-size: 6rem;
+    top: 16rem;
+    padding-left: 2.5rem;
   }
   #bloque_contenedor h1 {
     font-size: 3rem;
@@ -408,12 +490,30 @@ body {
   }
 }
 
+@media screen and (min-width: 1020px) {
+  #contenedor-detalle {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #contenedor-detalle img {
+    width: 50%;
+  }
+  #bloque_scroll p {
+    position: absolute;
+    color: #444444;
+    font-size: 5rem;
+    top: 30rem;
+    padding-left: 2.5rem;
+  }
+}
+
 @media screen and (min-width: 1800px) {
   #bloque_scroll img {
     height: 100%;
-  }
-  .bloque_contenedor__productos p {
-    font-size: 20px;
   }
 }
 
@@ -429,6 +529,14 @@ body {
           transform: scale(1.15);
   -webkit-transition: ease-in-out 500ms;
   transition: ease-in-out 500ms;
+}
+
+.asdasd {
+  -webkit-animation: blink 7s linear infinite;
+          animation: blink 7s linear infinite;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #afbcc7, 0 0 82px #abbbbd, 0 0 92px #9bbabd, 0 0 102px #99b3b9, 0 0 151px #8ea7b1;
 }
 
 .blink:hover {
