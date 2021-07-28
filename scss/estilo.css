@@ -1,11 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap");
 .title {
-  padding: 40px;
   text-align: center;
   font-weight: 500;
   font-size: 2rem;
   color: black;
-  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #afbcc7, 0 0 82px #abbbbd, 0 0 92px #9bbabd, 0 0 102px #99b3b9, 0 0 151px #8ea7b1;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #afbcc7;
 }
 
 body {
@@ -194,6 +193,8 @@ marquee {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: 100px;
+  padding-bottom: 20px;
 }
 
 #bloque_scroll img {
@@ -202,11 +203,10 @@ marquee {
 }
 
 #bloque_scroll p {
+  padding-top: 50px;
   position: relative;
   color: #444444;
   font-size: 3rem;
-  top: 4rem;
-  padding-left: 1rem;
 }
 
 #bloque_contenedor {
@@ -240,6 +240,9 @@ marquee {
   font-weight: 200;
   font-size: 2rem;
   color: black;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 2rem;
+  border-radius: 3px;
 }
 
 #bloque_contenedor h2 {
@@ -300,6 +303,7 @@ marquee {
 }
 
 .bloque_contenedor__productos {
+  padding-top: 100px;
   padding-bottom: 20px;
   max-width: 800px;
   width: 80%;
@@ -325,15 +329,16 @@ marquee {
           justify-content: space-between;
 }
 
+.bloque_contenedor__productos p {
+  font-weight: 200;
+  font-size: 2rem;
+  color: black;
+}
+
 .bloque_contenedor__productos .boxProducto {
   width: 50%;
   float: right;
   padding: 5px;
-}
-
-.bloque_contenedor__productos p {
-  text-align: center;
-  padding: 7px;
 }
 
 .bloque_contenedor__productos img {
@@ -343,7 +348,8 @@ marquee {
 }
 
 .proximamente {
-  padding: 0px;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
   margin: 0;
   width: 100%;
 }
@@ -363,11 +369,13 @@ marquee {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   background-color: rgba(255, 255, 255, 0.8);
+  bottom: 0;
+  position: relative;
 }
 
 .bloque_footer__contacto {
   width: 100%;
-  margin-top: 30px;
+  margin-top: 10px;
   margin-left: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -384,14 +392,30 @@ marquee {
   -ms-flex-line-pack: bottom;
       align-content: bottom;
   margin-bottom: 15px;
-  padding-top: 20px;
-  padding-left: 10px;
   -ms-flex-line-pack: center;
       align-content: center;
-  text-align: center;
+  text-align: left;
+}
+
+.bloque_footer__contacto img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.bloque_footer__contacto p {
+  padding: 10px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 2rem;
+  color: black;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #afbcc7;
 }
 
 .bloque_footer__contacto form input {
+  width: 300px;
   display: block;
   margin: 10px;
   padding: 8px;
@@ -543,8 +567,8 @@ marquee {
 .scale2:hover {
   -webkit-transform: scale(1.15);
           transform: scale(1.15);
-  -webkit-transition: ease-in-out 500ms;
-  transition: ease-in-out 500ms;
+  -webkit-transition: ease-in-out 1000ms;
+  transition: ease-in-out 1000ms;
 }
 
 .asdasd {
@@ -552,7 +576,7 @@ marquee {
           animation: blink 7s linear infinite;
   -webkit-animation-delay: 0s;
           animation-delay: 0s;
-  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #afbcc7, 0 0 82px #abbbbd, 0 0 92px #9bbabd, 0 0 102px #99b3b9, 0 0 151px #8ea7b1;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #afbcc7;
 }
 
 .blink:hover {
