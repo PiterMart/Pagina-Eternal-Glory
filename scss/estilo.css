@@ -2,7 +2,7 @@
 .title {
   text-align: center;
   font-weight: 500;
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: black;
   text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #afbcc7;
 }
@@ -329,7 +329,7 @@ marquee {
 
 #contenedor-detalle h1 {
   font-weight: 200;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: black;
   background-color: rgba(255, 255, 255, 0.8);
   padding: 2rem;
@@ -338,7 +338,7 @@ marquee {
 
 #contenedor-detalle p {
   font-weight: 200;
-  font-size: 2rem;
+  font-size: 1rem;
   color: black;
   background-color: rgba(255, 255, 255, 0.8);
   padding: 2rem;
@@ -361,7 +361,7 @@ marquee {
   margin: 0PX;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  max-width: 800px;
+  width: 350px;
   font-size: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -405,15 +405,17 @@ marquee {
 }
 
 #bloque_informacion {
+  -ms-flex-item-align: center;
+      align-self: center;
   padding-top: 3rem;
   padding-bottom: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   position: relative;
@@ -429,11 +431,34 @@ marquee {
 }
 
 #bloque_informacion img {
-  z-index: 5;
+  z-index: 2;
   margin: 0px;
-  width: 50%;
-  padding-bottom: 2rem;
-  padding-top: 2rem;
+  width: 100%;
+  padding: 1rem;
+}
+
+#bloque_informacion p {
+  width: 90%;
+  z-index: 3;
+  padding: 1rem;
+  position: absolute;
+  font-size: 20px;
+}
+
+#bloque_contacto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#bloque_contacto p {
+  padding: 10px;
 }
 
 .proximamente {
@@ -458,11 +483,12 @@ marquee {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   background-color: rgba(255, 255, 255, 0.8);
-  bottom: 0;
-  position: relative;
+  bottom: 100;
+  position: absolute;
 }
 
 .bloque_footer__contacto {
+  padding: 15px;
   width: 100%;
   margin-top: 10px;
   margin-left: 10px;
@@ -480,7 +506,6 @@ marquee {
   color: #444444;
   -ms-flex-line-pack: bottom;
       align-content: bottom;
-  margin-bottom: 15px;
   -ms-flex-line-pack: center;
       align-content: center;
   text-align: center;
@@ -501,10 +526,11 @@ marquee {
 }
 
 .bloque_footer__contacto p {
+  width: 100%;
   padding: 10px;
   text-align: center;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: black;
   text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #afbcc7;
 }
@@ -552,6 +578,19 @@ marquee {
 }
 
 @media screen and (min-width: 650px) {
+  #contenedor-detalle img {
+    width: 650px;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  #bloque_informacion img {
+    width: 50em;
+  }
+  #bloque_informacion p {
+    font-size: 30px;
+    width: 20em;
+  }
   #bloque_footer {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
@@ -564,9 +603,15 @@ marquee {
     width: 3em;
     border-radius: 2px;
   }
+  .bloque_contenedor__productos {
+    width: 650px;
+  }
 }
 
-@media screen and (min-width: 1020px) {
+@media screen and (min-width: 1180px) {
+  .title {
+    font-size: 2.2rem;
+  }
   .bloque_header__nav-toggle-label {
     display: none;
   }
@@ -620,9 +665,6 @@ marquee {
   #bloque_contenedor h1 {
     font-size: 3rem;
   }
-  .bloque_contenedor__productos {
-    width: 80%;
-  }
 }
 
 @media screen and (min-width: 1020px) {
@@ -633,9 +675,6 @@ marquee {
             flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-  }
-  #contenedor-detalle img {
-    width: 50%;
   }
   #bloque_scroll p {
     position: absolute;
@@ -667,7 +706,7 @@ marquee {
   transition: ease-in-out 1000ms;
 }
 
-.asdasd {
+.glow {
   -webkit-animation: blink 7s linear infinite;
           animation: blink 7s linear infinite;
   -webkit-animation-delay: 0s;

@@ -7,7 +7,7 @@
 
     text-align: center;
     font-weight: 500;
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: black;
     text-shadow:
     0 0 7px #fff,
@@ -58,7 +58,6 @@ marquee{
 	text-align: center;
 	font-family: 'EB Garamond', serif;
     font-weight: 500;
- 
     a{
         @include hiperlink();
         font-size: 1.2rem;
@@ -262,7 +261,7 @@ marquee{
     padding-top: 50px;
     h1{
         font-weight: 200;
-        font-size: 2rem;
+        font-size: 1.5rem;
         color: black;
         background-color: $fondoTransparente;
         padding: 2rem;
@@ -270,7 +269,7 @@ marquee{
     }
     p{
         font-weight: 200;
-        font-size: 2rem;
+        font-size: 1rem;
         color: black;
         background-color: $fondoTransparente;
         padding: 2rem;
@@ -289,7 +288,7 @@ marquee{
     margin: 0PX;
     padding-top: 2rem;
     padding-bottom: 2rem;
-    max-width: 800px;
+    width: 350px;
     font-size: 2rem;
     display: flex;
     flex-direction: row;
@@ -320,10 +319,11 @@ marquee{
     }
 }
 #bloque_informacion{
+    align-self: center;
     padding-top: 3rem;
     padding-bottom: 3rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     position: relative;
     align-items: center;
@@ -332,13 +332,28 @@ marquee{
     margin: 0;
     width: 100%;
     img{
-        z-index: 5;
+        z-index: 2;
         margin: 0px;   
-        width: 50%;     
-        padding-bottom: 2rem;
-        padding-top: 2rem;
+        width: 100%;     
+        padding: 1rem;
+    }
+    p{
+        width: 90%;
+        z-index: 3;
+        padding: 1rem;
+        position:absolute;
+        font-size: 20px;
+
     }
 
+}
+#bloque_contacto{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    p{
+        padding:  10px;
+    }
 }
 .proximamente{
     padding-top: 3rem;
@@ -354,10 +369,11 @@ marquee{
     flex-wrap: wrap;
     justify-content: space-evenly;
     background-color: $fondoTransparente;
-    bottom: 0;
-    position: relative;
+    bottom: 100;
+    position: absolute;
 }
 .bloque_footer__contacto{
+    padding: 15px;
     width: 100%;
 	margin-top: 10px;
     margin-left: 10px;
@@ -367,7 +383,6 @@ marquee{
     justify-content: space-around;
 	color: $fontColor;
 	align-content: bottom;
-	margin-bottom: 15px;
     align-content: center;
     text-align: center;
     a{
@@ -378,10 +393,11 @@ marquee{
         justify-self: center;
     }
     p{
+        width: 100%;
         padding: 10px;
         text-align: center;
         font-weight: 500;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         color: black;
         text-shadow:
         0 0 7px #fff,
@@ -423,6 +439,23 @@ marquee{
 }
 
 @media screen and (min-width: 650px) {
+    #contenedor-detalle{
+        img{
+            width: 650px;
+        }
+    }
+    .title{
+        font-size: 2rem;
+    }
+    #bloque_informacion{
+        img{
+             width: 50em;     
+         }
+        p{
+            font-size: 30px;
+            width:20em;
+        }
+    }
     #bloque_footer{
         flex-wrap: nowrap;
     }
@@ -439,9 +472,15 @@ marquee{
 
         }
     }
+    .bloque_contenedor__productos{
+        width: 650px;
+    }
 }
 
-@media screen and (min-width: 1020px) {
+@media screen and (min-width: 1180px) {
+    .title{
+        font-size: 2.2rem;
+    }
     .bloque_header__nav-toggle-label{
         display: none;
     }
@@ -480,18 +519,12 @@ marquee{
             font-size: 3rem;
         }
     }
-    .bloque_contenedor__productos{
-        width: 80%;
-    }
 }
 
 @media screen and (min-width: 1020px){
     #contenedor-detalle{
         flex-direction: row;
         flex-wrap: wrap;
-        img{
-            width: 50%;
-        }
     }
     #bloque_scroll{
         p{
