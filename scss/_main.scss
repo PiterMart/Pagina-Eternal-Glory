@@ -1,7 +1,7 @@
 @mixin hiperlink{
     text-decoration: none;
     color: black;
-    text-transform: uppercase;
+    text-transform: none;
 }
 .title{
 
@@ -25,12 +25,12 @@ body {
 	align-items: center;
 	min-height: 100vh;
     width: 100%;
-    cursor: url( "../media/2cross.svg"), auto;
     a{
         @include hiperlink();
     }
     img{
         height: 100%;
+        align-content: center;
     }
 }
 marquee{
@@ -158,42 +158,67 @@ marquee{
 }
 
 #bloque_scroll{
-    padding-top: 60px;
+    background-image: url(../media/animation-frame-scroll-2.png);
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     overflow: auto;
     text-align: center;
     justify-content: center;
-    margin-bottom: 100px;
-    padding-bottom: 20px;
+    position: relative;
+    height: 100vh;
+
     img{
-        size: 30rem;
-        width: 100%;
+        size: 100vh;
+        display: inline-block;
+        width: auto;
+        height: auto;
+        z-index: 0;
+        min-width: 100%;
+        min-height: 100%;
     }
     p{
-        padding-top: 50px;
+        padding: 1rem;
         position: relative; 
-        color: $fontColor;
+        color: white;
         font-size: 3rem;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0);
+        top: -8rem;
+
        
     }
 }
 
 #bloque_contenedor{
-    padding-top: 110px;
-    padding-bottom: 120px;
-	max-width: 800px;
-	margin: auto;
-    margin-top: 50px;
 	font-family: 'EB Garamond', serif;
     color: $fontColor;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
+    flex-wrap: wrap;
 	align-items: center;
     text-align: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
     a{
         @include hiperlink();
+    }
+    p{
+        margin-left: 1rem;
+        margin-right: 1rem;
+        align-content: center;
+        justify-content: center;
+        position:static;
+        float: none;
+        font-weight: 200;
+        font-size: 2rem;
+        color: rgb(255, 254, 254);
+        padding: 3rem;
+        border-radius: 1px;
+        background-color: transparent;
+        padding: 1rem;
+        margin: 0;
     }
     h1{
         font-weight: 200;
@@ -227,55 +252,96 @@ marquee{
  }
 
  #contenedor-detalle{
+    justify-content: center;
+    align-content: center;
+    text-align: center;
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     padding: 10px;
     padding-top: 50px;
+    h1{
+        font-weight: 200;
+        font-size: 2rem;
+        color: black;
+        background-color: $fondoTransparente;
+        padding: 2rem;
+        border-radius: 3px;
+    }
+    p{
+        font-weight: 200;
+        font-size: 2rem;
+        color: black;
+        background-color: $fondoTransparente;
+        padding: 2rem;
+        border-radius: 3px;
+        margin: 5px;
+    }
     img{
         padding: 10px;
         width: 100%;
     }
     a{
         @include hiperlink();
-        font-size: 1.2rem;
-
     }
 }
-
  .bloque_contenedor__productos{
-    padding-top: 100px;
-    padding-bottom: 20px;
+    margin: 0PX;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     max-width: 800px;
-    width: 80%;
-    margin: auto;
     font-size: 2rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    background-color: rgba(0, 0, 0, 0.63);
     p{
         font-weight: 200;
         font-size: 2rem;
-        color: black;
+        color: rgb(255, 255, 255);
+        size: 30rem;
+        background-color: rgba(0, 0, 0, 0);
+        width: 100%;
+
     }
-
-
-    justify-content: space-between;
     .boxProducto{
         width: 50%;
         float: right;
         padding: 5px;   
     }
     img{
-        size: 30rem;
+        z-index: 5;
         margin: 0px;   
-        width: 100%;     
+        width: 80%;  
+        size: 35rem;   
+        padding-bottom: 2rem;
     }
 }
+#bloque_informacion{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: 0;
+    width: 100%;
+    img{
+        z-index: 5;
+        margin: 0px;   
+        width: 50%;     
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+    }
+
+}
 .proximamente{
-    padding-top: 10rem;
+    padding-top: 3rem;
     padding-bottom: 10rem;
     margin: 0;
     width: 100%;
@@ -303,16 +369,19 @@ marquee{
 	align-content: bottom;
 	margin-bottom: 15px;
     align-content: center;
-    text-align: left;
+    text-align: center;
+    a{
+        @include hiperlink()
+    }
     img{
         align-self: center;
         justify-self: center;
     }
     p{
         padding: 10px;
-        text-align: left;
+        text-align: center;
         font-weight: 500;
-        font-size: 2rem;
+        font-size: 1.5rem;
         color: black;
         text-shadow:
         0 0 7px #fff,
@@ -431,6 +500,7 @@ marquee{
             font-size: 5rem;
             top: 30rem;
             padding-left: 2.5rem;
+            background-color: rgba(0, 0, 0, 0);
            
         }
     }
